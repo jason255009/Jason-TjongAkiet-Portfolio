@@ -1,0 +1,231 @@
+/* Opleidingen & Projects */
+.sub-heading {
+    font-size: 22px;
+    color: #00abf0;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+}
+
+.sub-heading:first-of-type {
+    margin-top: 0;
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 1rem;
+}
+
+.education-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 171, 240, 0.2);
+    transition: 0.4s;
+    position: relative;
+}
+
+.education-card:hover {
+    border-color: #00abf0;
+    transform: translateY(-10px);
+    background: rgba(0, 171, 240, 0.05);
+}
+
+.education-card.current {
+    border-color: rgba(0, 171, 240, 0.5);
+}
+
+.education-status {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.education-card.current .education-status {
+    background: rgba(0, 171, 240, 0.2);
+    color: #00abf0;
+    border: 1px solid #00abf0;
+}
+
+.education-card.completed .education-status {
+    background: rgba(0, 200, 100, 0.15);
+    color: #00c864;
+    border: 1px solid rgba(0, 200, 100, 0.4);
+}
+
+.education-icon {
+    font-size: 40px;
+    color: #00abf0;
+    margin-bottom: 15px;
+}
+
+.education-card h4 {
+    color: #00abf0;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.education-school {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 0 15px;
+}
+
+.education-card p {
+    font-size: 15px;
+    margin: 0 0 20px;
+}
+
+.education-meta {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.education-meta span {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.education-meta i {
+    color: #00abf0;
+    margin-right: 6px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 171, 240, 0.2);
+    transition: 0.4s;
+    position: relative;
+}
+
+.project-card:hover {
+    border-color: #00abf0;
+    transform: translateY(-10px);
+    background: rgba(0, 171, 240, 0.05);
+}
+
+.project-card.current {
+    border-color: rgba(0, 171, 240, 0.5);
+}
+
+.project-status {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    background: rgba(0, 200, 100, 0.15);
+    color: #00c864;
+    border: 1px solid rgba(0, 200, 100, 0.4);
+}
+
+.project-status.web {
+    background: rgba(0, 171, 240, 0.2);
+    color: #00abf0;
+    border: 1px solid #00abf0;
+}
+
+.project-status.bezig {
+    background: rgba(0, 171, 240, 0.2);
+    color: #00abf0;
+    border: 1px solid #00abf0;
+}
+
+.project-icon {
+    font-size: 40px;
+    color: #00abf0;
+    margin-bottom: 15px;
+}
+
+.project-card h4 {
+    color: #00abf0;
+    font-size: 22px;
+    margin-bottom: 5px;
+    padding-right: 60px;
+}
+
+.project-subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 0 15px;
+}
+
+.project-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 0 20px;
+}
+
+.project-meta span {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.project-meta i {
+    color: #00abf0;
+    margin-right: 6px;
+}
+
+@media (max-width: 1023px) {
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .education-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+}
+
+@media (max-width: 767px) {
+    .education-card,
+    .project-card {
+        padding: 24px 20px;
+    }
+
+    .education-card h4,
+    .project-card h4 {
+        font-size: 20px;
+        padding-right: 50px;
+    }
+
+    .project-grid,
+    .education-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .sub-heading {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 479px) {
+    .education-status,
+    .project-status {
+        top: 16px;
+        right: 16px;
+        font-size: 10px;
+        padding: 3px 10px;
+    }
+}
