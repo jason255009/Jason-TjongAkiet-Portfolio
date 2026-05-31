@@ -1,0 +1,130 @@
+/* Contact sectie */
+.contact-intro {
+    max-width: 600px;
+    font-size: 17px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    margin: -1rem 0 2.5rem;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 14px 18px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 171, 240, 0.2);
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: 0.3s;
+    cursor: default;
+}
+
+a.contact-card {
+    cursor: pointer;
+}
+
+.contact-card:hover {
+    border-color: #00abf0;
+    background: rgba(0, 171, 240, 0.08);
+    transform: translateX(8px);
+    box-shadow: 0 4px 20px rgba(0, 171, 240, 0.15);
+}
+
+.contact-card:hover .contact-icon {
+    background: rgba(0, 171, 240, 0.2);
+    box-shadow: 0 0 15px rgba(0, 171, 240, 0.3);
+    transform: scale(1.08);
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 171, 240, 0.1);
+    border: 1px solid rgba(0, 171, 240, 0.3);
+    border-radius: 8px;
+    margin-bottom: 0;
+    transition: 0.3s;
+}
+
+.contact-icon i {
+    font-size: 18px;
+    color: #00abf0;
+    text-shadow: 0 0 10px rgba(0, 171, 240, 0.3);
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.contact-label {
+    display: block;
+    font-weight: 600;
+    font-size: 11px;
+    color: #00abf0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.contact-value {
+    font-size: 14px;
+    color: white;
+    margin: 0;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+.contact-link {
+    display: block;
+    text-decoration: none;
+    margin-bottom: 2px;
+}
+
+.contact-link:last-child {
+    margin-bottom: 0;
+}
+
+.contact-social {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 171, 240, 0.15);
+}
+
+.contact-social-text {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 15px;
+}
+
+.contact-social .social-media {
+    margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .contact-intro {
+        font-size: 15px;
+        margin: -0.5rem 0 2rem;
+    }
+
+    .contact-list {
+        max-width: 100%;
+    }
+
+    .contact-card:hover {
+        transform: none;
+    }
+}
